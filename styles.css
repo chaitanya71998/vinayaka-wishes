@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #fdb833 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    text-align: center;
+    animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+.ganesha-icon {
+    font-size: 60px;
+    animation: bounce 2s infinite;
+    display: inline-block;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+h1 {
+    color: #ff6b35;
+    font-size: 2.5em;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    color: #666;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+.wishes-container {
+    margin: 30px 0;
+}
+
+.wish-card {
+    background: linear-gradient(135deg, #fff5e1 0%, #ffe8cc 100%);
+    border: 3px solid #ff6b35;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0;
+    animation: fadeInScale 0.6s ease-out;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.2);
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.wish-text {
+    font-size: 1.8em;
+    color: #ff6b35;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.wish-meaning {
+    font-size: 1.1em;
+    color: #666;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.animation-section {
+    margin: 30px 0;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animated-lotus {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: rotate 8s linear infinite;
+}
+
+.animated-lotus::before {
+    content: '🌸';
+    font-size: 80px;
+    position: absolute;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.wish-button {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    font-weight: bold;
+}
+
+.wish-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+}
+
+.wish-button:active {
+    transform: translateY(-1px);
+}
+
+footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #ff6b35;
+    color: #666;
+    font-size: 0.95em;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .ganesha-icon {
+        font-size: 50px;
+    }
+
+    .wish-text {
+        font-size: 1.4em;
+    }
+}
